@@ -19,7 +19,15 @@ SELECT
   campaign_name,
   ad_name AS creative_name,
   ad_group_name,
-  target_url
+  target_url,
+  NULL AS ad_format,
+  NULL AS audience_name,
+  campaign_name AS campaign_name_selection,
+  campaign_name AS campaign_descr,
+  ad_name AS creative_descr,
+  'ChatGPT' AS platform,
+  'ChatGPT' AS publisher,
+  'Native' AS channel
 FROM joint_campaigns
 GROUP BY campaign_name, ad_name, ad_group_name, target_url
 {% endmacro %}

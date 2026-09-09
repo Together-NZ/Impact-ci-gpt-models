@@ -1,7 +1,7 @@
 config-version: 2
 
 name: 'gpt'
-version: '1.0.2'
+version: '1.0.3'
 
 macro-paths: ["macros"]
 
