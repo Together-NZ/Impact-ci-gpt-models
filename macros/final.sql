@@ -12,10 +12,10 @@ joint_campaigns AS (
     ON insights.ad_id = metadata.ad_id
 )
 SELECT
-  SUM(media_cost),
-  SUM(clicks),
-  SUM(conversions),
-  SUM(impressions),
+  SUM(media_cost) AS media_cost,
+  SUM(clicks) AS clicks,
+  SUM(conversions) AS conversions,
+  SUM(impressions) AS impressions,
   campaign_name,
   ad_name AS creative_name,
   ad_group_name,
