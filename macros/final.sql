@@ -27,7 +27,8 @@ SELECT
   ad_name AS creative_descr,
   'ChatGPT' AS platform,
   'ChatGPT' AS publisher,
-  'Native' AS channel
+  'Native' AS channel,
+  date
 FROM joint_campaigns
-GROUP BY campaign_name, ad_name, ad_group_name, target_url
+GROUP BY campaign_name, ad_name, ad_group_name, target_url, date
 {% endmacro %}
