@@ -5,7 +5,7 @@ raw_ads_insights AS (
   SAFE_CAST(JSON_VALUE(data,'$.impressions') AS INT64)  AS impressions,
   SAFE_CAST(JSON_VALUE(data,'$.spend') AS FLOAT64) AS media_cost,
   JSON_VALUE(data,'$.readable_time') AS date,
-  ROW_NUMBER() OVER (PARTITION BY JSON_VALUE(data,'$.id'),
+  ROW_NUMBER() OVER (PARTITION BY JSON_VALUE(data,'$.ad_id'),
   JSON_VALUE(data,'$.readable_time')
   ORDER BY _sdc_batched_at DESC) AS row_num
 
